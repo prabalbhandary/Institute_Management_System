@@ -1,9 +1,10 @@
-const Student = require("../models/studentModel");
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-const cloudinary = require("cloudinary").v2;
-const Fee = require("../models/feeModel");
-const Course = require("../models/courseModel");
+import mongoose from "mongoose";
+import jwt from "jsonwebtoken";
+import { v2 as cloudinary } from "cloudinary";
+
+import Student from "../models/studentModel.js";
+import Fee from "../models/feeModel.js";
+import Course from "../models/courseModel.js";
 
 const addNewStudent = (req, res) => {
   const token = req.headers.authorization.split(" ")[1];
@@ -287,7 +288,7 @@ const latestStudents = (req, res) => {
     });
 };
 
-module.exports = {
+export {
   addNewStudent,
   getStudents,
   getStudentwithCourse,

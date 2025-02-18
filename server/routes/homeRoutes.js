@@ -1,9 +1,9 @@
-const express = require("express");
-const checkAuth = require("../middlewares/checkAuth");
-const {allData} = require("../controllers/homeControllers");
+import express from "express";
+import checkAuth from "../middlewares/checkAuth.js";
+import { allData } from "../controllers/homeControllers.js";
 
 const router = express.Router();
 
 router.get("/all-data", checkAuth, allData);
 
-module.exports = router;
+export default router;

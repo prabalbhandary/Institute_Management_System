@@ -1,9 +1,9 @@
-const cloudinary = require("cloudinary").v2;
-const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+import {v2 as cloudinary} from "cloudinary"
+import mongoose from "mongoose";
+import bcrypt from "bcrypt"
+import jwt from 'jsonwebtoken'
 
-const User = require("../models/userModel");
+import User from "../models/userModel.js"
 
 const register = (req, res) => {
   User.find({ email: req.body.email }).then((users) => {
@@ -88,7 +88,7 @@ const login = (req, res) => {
   });
 };
 
-module.exports = {
+export {
   register,
   login,
 };

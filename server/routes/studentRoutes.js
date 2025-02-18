@@ -1,6 +1,14 @@
-const express = require("express");
-const { addNewStudent, getStudents, getStudent, getStudentwithCourse, updateStudent, deleteStudent, latestStudents } = require("../controllers/studentControllers");
-const checkAuth = require("../middlewares/checkAuth");
+import express from "express";
+import {
+  addNewStudent,
+  getStudents,
+  getStudent,
+  getStudentwithCourse,
+  updateStudent,
+  deleteStudent,
+  latestStudents,
+} from "../controllers/studentControllers.js";
+import checkAuth from "../middlewares/checkAuth.js";
 
 const router = express.Router();
 
@@ -12,4 +20,4 @@ router.delete("/delete-student/:id", checkAuth, deleteStudent);
 router.put("/update-student/:id", checkAuth, updateStudent);
 router.get("/latest-students", checkAuth, latestStudents);
 
-module.exports = router;
+export default router;

@@ -1,34 +1,37 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const feeSchema = new mongoose.Schema({
+const feeSchema = new mongoose.Schema(
+  {
     _id: mongoose.Types.ObjectId,
     fullName: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     phone: {
-        type: String,
-        required: true,
-        unique: true
+      type: String,
+      required: true,
+      unique: true,
     },
     courseId: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     uid: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     amount: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     remark: {
-        type: String,
-        required: true
-    }
-}, {timestamps: true});
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
 
 const Fees = mongoose.model("Fee", feeSchema);
 
-module.exports = Fees;
+export default Fees;

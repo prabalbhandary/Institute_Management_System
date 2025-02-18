@@ -1,19 +1,21 @@
-const http = require("http");
-require("colors");
-const dotenv = require("dotenv");
+import http from "http";
+import "colors";
+import dotenv from "dotenv";
 dotenv.config();
+import connectCloud from "./config/cloudinary.js";
+import connectDB from "./database/db.js";
 
-const connectCloud = require("./config/cloudinary");
-const connectDB = require("./database/db");
+import app from "./app.js";
 
 const port = process.env.PORT || 3000;
-
-const app = require("./app");
+const mode = process.env.NODE_ENV || "production";
 
 const server = http.createServer(app);
 
 server.listen(port, () => {
-    connectDB();
-    console.log(`Server running on http://localhost:${port}`.bgMagenta.white);
-    connectCloud();
+  connectDB();
+  console.log(
+    `Server running on ${mode} mode at http://localhost:${port}`.bgMagenta.white
+  );
+  connectCloud();
 });

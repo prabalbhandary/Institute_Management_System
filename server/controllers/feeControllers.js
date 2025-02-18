@@ -1,6 +1,8 @@
-const Fee = require("../models/feeModel");
-const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
+import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
+
+import Fee from "../models/feeModel.js";
+
 const addFee = (req, res) => {
   const token = req.headers.authorization.split(" ")[1];
   const verify = jwt.verify(token, process.env.JWT_SECRET_KEY);
@@ -84,8 +86,4 @@ const studentFeeHistory = (req, res) => {
   }
 };
 
-module.exports = {
-  addFee,
-  feeHistory,
-  studentFeeHistory,
-};
+export { addFee, feeHistory, studentFeeHistory };

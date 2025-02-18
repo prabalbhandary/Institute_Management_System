@@ -1,8 +1,9 @@
-const Course = require("../models/courseModel");
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-const cloudinary = require("cloudinary").v2;
-const Student = require("../models/studentModel");
+import mongoose from "mongoose";
+import { v2 as cloudinary } from "cloudinary";
+import jwt from "jsonwebtoken";
+
+import Course from "../models/courseModel.js";
+import Student from "../models/studentModel.js";
 
 const addCourse = (req, res) => {
   const token = req.headers.authorization.split(" ")[1];
@@ -100,20 +101,20 @@ const deleteCourse = (req, res) => {
       Course.findByIdAndDelete(req.params.id)
         .then((cResult) => {
           cloudinary.uploader.destroy(cResult.imageId, (deletedImg) => {
-            Student.deleteMany({courseId: req.params.id})
-            .then((data) => {
-              return res.status(200).json({
-                success: true,
-                message: "Course deleted successfully",
+            Student.deleteMany({ courseId: req.params.id })
+              .then((data) => {
+                return res.status(200).json({
+                  success: true,
+                  message: "Course deleted successfully",
+                });
+              })
+              .catch((error) => {
+                console.log(error.message);
+                return res.status(400).json({
+                  success: false,
+                  message: "You can't delete course",
+                });
               });
-            })
-            .catch((error) => {
-              console.log(error.message);
-              return res.status(400).json({
-                success: false,
-                message: "You can't delete course",
-              });
-            });
           });
         })
         .catch((error) => {
@@ -231,7 +232,7 @@ const latestCourses = (req, res) => {
     });
 };
 
-module.exports = {
+export {
   addCourse,
   getCourses,
   getCourse,
