@@ -28,11 +28,4 @@ app.use("/api/v1/students", studentRoutes);
 app.use("/api/v1/fees", feeRoutes);
 app.use("/api/v1/home", homeRoutes);
 
-app.use("*", (req, res) => {
-  res.status(404).json({
-    success: false,
-    message: "Route not found",
-  });
-});
-
 export default app;
