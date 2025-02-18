@@ -13,7 +13,7 @@ const PaymentHistory = () => {
   const getPaymentHistory = () => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:4000/api/v1/fees/payment-history`, {
+      .get(`https://institute-management-system.onrender.com/api/v1/fees/payment-history`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {

@@ -54,7 +54,7 @@ const AddCourse = () => {
     if (location.state) {
       axios
         .put(
-          `http://localhost:4000/api/v1/courses/update-course/${location.state.course._id}`,
+          `https://institute-management-system.onrender.com/api/v1/courses/update-course/${location.state.course._id}`,
           formData,
           {
             headers: {
@@ -75,7 +75,7 @@ const AddCourse = () => {
         });
     } else {
       axios
-        .post("http://localhost:4000/api/v1/courses/add-course", formData, {
+        .post("https://institute-management-system.onrender.com/api/v1/courses/add-course", formData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

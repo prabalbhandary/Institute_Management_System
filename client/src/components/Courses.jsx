@@ -15,7 +15,7 @@ const Courses = () => {
   const getCourses = () => {
     setIsLoading(true);
     axios
-      .get("http://localhost:4000/api/v1/courses/all-courses", {
+      .get("https://institute-management-system.onrender.com/api/v1/courses/all-courses", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {

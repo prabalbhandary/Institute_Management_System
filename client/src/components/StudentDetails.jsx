@@ -18,7 +18,7 @@ const StudentDetails = () => {
   const getStudentDetail = () => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:4000/api/v1/students/student-detail/${id}`, {
+      .get(`https://institute-management-system.onrender.com/api/v1/students/student-detail/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {
@@ -38,7 +38,7 @@ const StudentDetails = () => {
       setIsLoading(true);
       axios
         .delete(
-          `http://localhost:4000/api/v1/students/delete-student/${studentId}`,
+          `https://institute-management-system.onrender.com/api/v1/students/delete-student/${studentId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -16,7 +16,7 @@ const CourseDetails = () => {
   const getCourseDetail = () => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:4000/api/v1/courses/course-details/${id}`, {
+      .get(`https://institute-management-system.onrender.com/api/v1/courses/course-details/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {
@@ -35,7 +35,7 @@ const CourseDetails = () => {
       setIsLoading(true);
       axios
         .delete(
-          `http://localhost:4000/api/v1/courses/delete-course/${courseId}`,
+          `https://institute-management-system.onrender.com/api/v1/courses/delete-course/${courseId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

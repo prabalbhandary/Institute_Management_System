@@ -25,7 +25,7 @@ const Signup = () => {
     formData.append("phone", phone);
     formData.append("image", image);
     axios
-      .post("http://localhost:4000/api/v1/users/signup", formData)
+      .post("https://institute-management-system.onrender.com/api/v1/users/signup", formData)
       .then((res) => {
         setIsLoading(false);
         toast.success(res.data.message);

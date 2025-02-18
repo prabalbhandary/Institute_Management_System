@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
   const getHomeDetails = () => {
     axios
-      .get("http://localhost:4000/api/v1/home/all-data", {
+      .get("https://institute-management-system.onrender.com/api/v1/home/all-data", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {

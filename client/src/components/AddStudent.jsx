@@ -37,7 +37,7 @@ const AddStudent = () => {
   const getCourses = () => {
     setIsLoading(true);
     axios
-      .get("http://localhost:4000/api/v1/courses/all-courses", {
+      .get("https://institute-management-system.onrender.com/api/v1/courses/all-courses", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {
@@ -71,7 +71,7 @@ const AddStudent = () => {
     if (location.state) {
       axios
         .put(
-          `http://localhost:4000/api/v1/students/update-student/${location.state.student._id}`,
+          `https://institute-management-system.onrender.com/api/v1/students/update-student/${location.state.student._id}`,
           formData,
           {
             headers: {
@@ -90,7 +90,7 @@ const AddStudent = () => {
         });
     } else {
       axios
-        .post("http://localhost:4000/api/v1/students/add-student", formData, {
+        .post("https://institute-management-system.onrender.com/api/v1/students/add-student", formData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

@@ -14,7 +14,7 @@ const Students = () => {
   const getStudentList = () => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:4000/api/v1/students/all-students`, {
+      .get(`https://institute-management-system.onrender.com/api/v1/students/all-students`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {

@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     axios
-      .post("http://localhost:4000/api/v1/users/login", {
+      .post("https://institute-management-system.onrender.com/api/v1/users/login", {
         email: email,
         password: password,
       })
