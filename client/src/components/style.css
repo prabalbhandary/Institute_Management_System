@@ -495,3 +495,160 @@ th {
     transform: rotate(360deg);
   }
 }
+/* <---------- Responsive Media Queries ----------> */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .signup-box, .login-box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .signup-left, .login-left {
+    width: 100%;
+    height: 200px;
+  }
+  .signup-right, .login-right {
+    width: 100%;
+    padding: 20px;
+  }
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .nav-container {
+    width: 100%;
+    height: auto;
+  }
+  .main-container {
+    width: 100%;
+  }
+  .course-box {
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+  }
+  .list-container {
+    flex-direction: column;
+  }
+  .table-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small devices (tablets, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .signup-box, .login-box {
+    width: 85%;
+    flex-direction: column;
+  }
+  .signup-left, .login-left {
+    width: 100%;
+    height: 220px;
+  }
+  .signup-right, .login-right {
+    width: 100%;
+    padding: 20px;
+  }
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .nav-container {
+    width: 100%;
+    height: auto;
+  }
+  .main-container {
+    width: 100%;
+  }
+  .course-box {
+    width: 48%;
+  }
+  .box {
+    width: 48%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .signup-box, .login-box {
+    width: 80%;
+  }
+  .signup-left, .login-left {
+    width: 45%;
+  }
+  .signup-right, .login-right {
+    width: 55%;
+  }
+  .dashboard-container {
+    width: 90%;
+  }
+  .nav-container {
+    width: 25%;
+  }
+  .main-container {
+    width: 75%;
+  }
+  .course-box {
+    width: 30%;
+  }
+  .box {
+    width: 30%;
+  }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .signup-box, .login-box {
+    width: 75%;
+  }
+  .signup-left, .login-left {
+    width: 40%;
+  }
+  .signup-right, .login-right {
+    width: 60%;
+  }
+  .dashboard-container {
+    width: 85%;
+  }
+  .nav-container {
+    width: 20%;
+  }
+  .main-container {
+    width: 80%;
+  }
+  .course-box {
+    width: 23%;
+  }
+  .box {
+    width: 31%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .signup-box, .login-box {
+    width: 70%;
+  }
+  .signup-left, .login-left {
+    width: 40%;
+  }
+  .signup-right, .login-right {
+    width: 60%;
+  }
+  .dashboard-container {
+    width: 95%;
+  }
+  .nav-container {
+    width: 18%;
+  }
+  .main-container {
+    width: 82%;
+  }
+  .course-box {
+    width: 23%;
+  }
+  .box {
+    width: 31%;
+  }
+}
