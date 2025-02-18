@@ -1,0 +1,15 @@
+Login API - Email & Password
+Sign Up API - First Name, Last Name, Email, Password, Phone & Image
+Dashboard
+Add New Course API
+Get All Course API
+User Courses API
+One Course Details
+Student Details API & Payment Details
+Add Student
+Fee Collection Form
+Payment
+Payment History
+
+
+Sign Up, Login, Batch, Students, Fee Collection
