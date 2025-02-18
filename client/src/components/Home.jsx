@@ -22,7 +22,6 @@ const Home = () => {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {
-        console.log(res);
         setIsLoading(false);
         setTotalCourse(res.data.totalCourse);
         setTotalStudent(res.data.totalStudent);
