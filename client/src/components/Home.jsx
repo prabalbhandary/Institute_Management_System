@@ -99,7 +99,7 @@ const Home = () => {
               </tbody>
             </table>
           ) : (
-            <p>No students to show</p>
+            <Loader />
           )}
         </div>
         <div className="table-container">
@@ -127,7 +127,7 @@ const Home = () => {
               </tbody>
             </table>
           ) : (
-            <p>No transaction done till now</p>
+            <Loader />
           )}
         </div>
       </div>
